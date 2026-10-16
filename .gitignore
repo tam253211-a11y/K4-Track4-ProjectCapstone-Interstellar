@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pt
+logs/
+*.mp4
+models/*.task

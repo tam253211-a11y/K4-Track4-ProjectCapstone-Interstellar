@@ -1,0 +1,8 @@
+# Cai PyTorch ban CPU truoc (nhe hon, khong can GPU):
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+ultralytics==8.4.178
+mediapipe==1.1.1
+opencv-python==5.0.0.93
+numpy==2.5.2
+pillow==12.3.0
+edge-tts==7.3.1  # chi can khi tao lai file giong noi (scripts/make_voice.py)
