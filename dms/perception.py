@@ -51,5 +51,7 @@ class Perception:
             face_pts, face_src = self.last_face, "nho"
 
         face = Face.from_landmarks(face_pts) if face_pts is not None else None
+        # Do sang trung binh (0-255): thieu sang thi moc mat/tay va box deu kem tin cay
+        brightness = float(cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY).mean())
         return dict(phones=phones, hands=hands, face=face, face_pts=face_pts, face_src=face_src,
-                    latency_ms=(time.perf_counter() - now) * 1000)
+                    brightness=brightness, latency_ms=(time.perf_counter() - now) * 1000)
